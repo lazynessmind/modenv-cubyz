@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="run-mod-setup" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="D:\Dev\opensource\cubyzmod\dev\copy-mod-to-mods-folder.ps1" workingDirectory="D:\Dev\opensource\cubyzmod" executablePath="C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe">
-    <envs />
-    <method v="2" />
-  </configuration>
-</component>

@@ -1,1 +1,0 @@
-Get-ChildItem '.\target' -Filter '*.jar' | Copy-Item -Destination '.\mods' -Force -PassThru
