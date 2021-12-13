@@ -30,6 +30,11 @@ This setup will do the following things:
 
 When done you can open the folder on your IDE and it's done.
 
-### Not in Intellij:
+### On Intellij?
+
+Install the following plugin to make the IDE run powershell scripts:
+https://plugins.jetbrains.com/plugin/10249-powershell
+
+### Not on Intellij?
 
 If you are not on Intellij (U should :3) you need to create a run config that runs `cubyz.client.GameLauncher` and set the working directory to the workspace root folder.
