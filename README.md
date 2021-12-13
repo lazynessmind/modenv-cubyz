@@ -1,8 +1,28 @@
-# modenv-cubyz [IN PROGRESS] ⚠️⚠️⚠️⚠️⚠️
+# ️modenv-cubyz
+
+**`[IN PROGRESS]`**
 
 In progress development of clone ready modding environment to Cubyz
 
- - Run setup.ps1 to download and decompress the assets
+Currently only supporting Windows with Powershell scripts and Maven for build system.
 
- - If using Intellij you can copy the run configurations from the dev folder and put in .idea folder. The run the GameLauncher configuration.
-This will clean and build your mod and then move it to the mods folder. When done the game launches.
+#### TODO:
+- [ ] Add example mod sources like blocks and items.
+- [ ] Linux support with bash scripts.
+- [ ] Gradle support.
+
+### Use steps:
+
+- Clone the repo and enter the directory.
+```powershell
+> git clone https://github.com/lazyJunk/modenv-cubyz
+> cd modenv-cubyz
+```
+- After that you need to run the `setup.ps1` powershell script to download and setup the workspace.
+```powershell
+> setup.ps1
+```
+This setup will do the following things:
+- Get the **cubyz release version** from **workspace.props**.
+- Download and decompress the **game assets** with the given version.
+- Check if you are using Intellij, if so the script will copy the runs in `dev\runs\` to your workspace folder.
