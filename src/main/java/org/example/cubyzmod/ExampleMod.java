@@ -29,7 +29,5 @@ public class ExampleMod {
 
     @EventHandler(type = "register:block")
     public void registerBlocks(Registry<RegistryElement> registries) {
-        Block example_mod = new Block(new Resource(MOD_ID, "example_mod").toString(), 1f, 1f, Block.BlockClass.STONE);
-        registries.register(example_mod);
     }
 }
