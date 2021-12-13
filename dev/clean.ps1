@@ -5,6 +5,7 @@ $assetsBackground = Test-Path "./assets/backgrounds/"
 $mods = Test-Path "./mods/"
 $logs = Test-Path "./logs/"
 $settings = Test-Path "./settings.json"
+$target = Test-Path "./target/"
 
 # assets
 if ($assetsCubyz)
@@ -35,6 +36,12 @@ if ($settings)
 {
     Write-Host "Removing settings.json..." -ForegroundColor black -BackgroundColor White
     Remove-Item -Recurse -Force "./settings.json"
+}
+
+# target
+if($target){
+    Write-Host "Removing target folder..." -ForegroundColor black -BackgroundColor White
+    Remove-Item -Recurse -Force "./target/"
 }
 
 Write-Host "Done." -ForegroundColor black -BackgroundColor White
