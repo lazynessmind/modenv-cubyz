@@ -18,10 +18,19 @@ if (Test-Path $FileName) {
     Remove-Item $FileName
 }
 
-$FileName = ".\.idea"
-if (Test-Path $FileName) {
+$FileName = ".\.idea\"
+$runFolder = Test-Path ".\.idea\runConfigurations\"
+
+if (Test-Path $FileName)
+{
+    if (!$runFolder)
+    {
+        Write-Host "Creating runs folder on .idea folder..." -ForegroundColor black -BackgroundColor White
+        new-item ".\.idea\runConfigurations\" -itemtype directory | Out-Null
+    }
     Write-Host "Moving Intellij Run Config to workspace..." -ForegroundColor black -BackgroundColor White
-    Copy-Item
+    Copy-Item -Path ".\dev\runs\*" -Destination ".\.idea\runConfigurations\"
+    Write-Host "NOTE: If the runs don't appear on the run selector, restart Intellij." -ForegroundColor White -BackgroundColor Yellow
 }
 
 Write-Host "Setup is done..." -ForegroundColor black -BackgroundColor White
