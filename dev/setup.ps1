@@ -1,4 +1,10 @@
-Write-Host "Running cubyz development setup..." -ForegroundColor black -BackgroundColor White
+$file_content = Get-Content "./workspace.props"
+$file_content = $file_content -join [Environment]::NewLine
+
+$configuration = ConvertFrom-StringData($file_content)
+$cubyzVersion = $configuration.'cubyzVersion'
+
+Write-Host "Running cubyz development setup for $cubyzVersion..." -ForegroundColor black -BackgroundColor White
 Write-Host "Download assets from cubyz..." -ForegroundColor black -BackgroundColor White
 
 $FileName = ".\assets.zip"
@@ -6,7 +12,7 @@ if (Test-Path $FileName) {
   Remove-Item $FileName
 }
 
-Invoke-WebRequest -Uri "https://github.com/PixelGuys/Cubyz/releases/download/R6/assets.zip" -OutFile ".\assets.zip"
+Invoke-WebRequest -Uri "https://github.com/PixelGuys/Cubyz/releases/download/$cubyzVersion/assets.zip" -OutFile ".\assets.zip"
 
 Write-Host "Uncompressing assets.zip..." -ForegroundColor black -BackgroundColor White
 
