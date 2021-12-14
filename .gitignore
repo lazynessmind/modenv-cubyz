@@ -2,5 +2,6 @@
 logs
 mods
 target
-assets
+assets/cubyz
+assets/backgrounds
 settings.json
