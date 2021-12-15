@@ -1,10 +1,12 @@
 package org.example.cubyzmod;
 
-import cubyz.api.*;
-import cubyz.world.blocks.Block;
+import cubyz.api.EventHandler;
+import cubyz.api.Mod;
+import cubyz.api.Proxy;
+import lazy.cubyz.modutils.datagen.DataGeneration;
+import org.example.cubyzmod.datagen.BlockGen;
 
 @Mod(id = "example_mod", name = "Example Mod")
-@LoadOrder(id = "addons-loader", order = Order.AFTER)
 public class ExampleMod {
 
     public static final String MOD_ID = "example_mod";
@@ -25,11 +27,5 @@ public class ExampleMod {
     @EventHandler(type = "postInit")
     public void postInit() {
         proxy.postInit();
-    }
-
-    @EventHandler(type = "register:block")
-    public void registerBlocks(Registry<RegistryElement> registries) {
-        // This will work if the cubyz developers merge this pr https://github.com/PixelGuys/Cubyz/pull/29
-        //registries.register(new Block(MOD_ID.concat(":example"), .5f, .5f, Block.BlockClass.STONE));
     }
 }
