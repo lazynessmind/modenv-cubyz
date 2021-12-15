@@ -4,4 +4,6 @@ mods
 target
 assets/cubyz
 assets/backgrounds
+saves
 settings.json
+ConsoleHistory
