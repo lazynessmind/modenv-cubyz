@@ -2,9 +2,11 @@ Write-Host "Cleaning workspace..." -ForegroundColor black -BackgroundColor White
 
 $assetsCubyz = Test-Path "./assets/cubyz/"
 $assetsBackground = Test-Path "./assets/backgrounds/"
+$saves = Test-Path "./saves/"
 $mods = Test-Path "./mods/"
 $logs = Test-Path "./logs/"
 $settings = Test-Path "./settings.json"
+$consoleHistory = Test-Path "./ConsoleHistory"
 $target = Test-Path "./target/"
 
 # assets
@@ -17,6 +19,7 @@ if ($assetsCubyz)
         Remove-Item -Recurse -Force "./assets/backgrounds/"
     }
 }
+
 # mods
 if ($mods)
 {
@@ -31,11 +34,25 @@ if ($logs)
     Remove-Item -Recurse -Force "./logs/"
 }
 
-# settings
+# Settings
 if ($settings)
 {
     Write-Host "Removing settings.json..." -ForegroundColor black -BackgroundColor White
     Remove-Item -Recurse -Force "./settings.json"
+}
+
+# Settings
+if ($consoleHistory)
+{
+    Write-Host "Removing ConsoleHistory..." -ForegroundColor black -BackgroundColor White
+    Remove-Item -Recurse -Force "./ConsoleHistory"
+}
+
+# Settings
+if ($saves)
+{
+    Write-Host "Removing world saves folder..." -ForegroundColor black -BackgroundColor White
+    Remove-Item -Recurse -Force "./saves/"
 }
 
 # target
