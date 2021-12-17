@@ -30,7 +30,7 @@ if ($mods)
 # logs
 if ($logs)
 {
-    Write-Host "Removing mods folder..." -ForegroundColor black -BackgroundColor White
+    Write-Host "Removing logs folder..." -ForegroundColor black -BackgroundColor White
     Remove-Item -Recurse -Force "./logs/"
 }
 
