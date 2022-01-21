@@ -1,5 +1,8 @@
 # ️modenv-cubyz
 
+This is going to change from using cubyz as dependency to use the direct source code by cloning the repo itself.
+
+
 **`[IN PROGRESS]`**
 
 In progress development of clone ready modding environment to Cubyz
